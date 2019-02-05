@@ -19,6 +19,7 @@ class Ball extends Rect {
     }
 }
 
+//Creamos el canvas
 const canvas = document.getElementById('pong');
 const context = canvas.getContext('2d');
 
@@ -40,12 +41,16 @@ function callback(millis) {
 }
 
 function update(dt) {
+    //Hacemos que la pelota tome velocidad y se mueva
     ball.pos.x += ball.vel.x * dt;
     ball.pos.y += ball.vel.y * dt;
 
+
+    //Dibujamos el escenario
     context.fillStyle = "#000";
     context.fillRect(0, 0, canvas.width, canvas.height);
 
+    //Dibujamos la pelota
     context.fillStyle = "#fff";
     context.fillRect(ball.pos.x, ball.pos.y, ball.size.x, ball.size.y);
 }
