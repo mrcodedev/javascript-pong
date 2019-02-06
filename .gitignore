@@ -9,7 +9,11 @@
 .LSOverride
 
 # VSCode
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
 # Icon must end with two \r
 Icon
